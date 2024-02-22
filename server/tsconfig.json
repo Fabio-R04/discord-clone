@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+      "target": "es6",
+      "module": "CommonJS",
+      "rootDir": "./",
+      "esModuleInterop": true,
+      "strict": true,
+      "typeRoots": ["./node_modules/@types", "./src/typings"]
+    },
+    "files": [
+      "./src/server.ts",
+      "./src/typings/custom.d.ts"
+    ]
+}

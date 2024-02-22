@@ -1,0 +1,85 @@
+.confirm-delete {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $popup-bg;
+    z-index: 50;
+
+    &__popup {
+        max-width: 44rem;
+        width: 100%;
+        border-radius: .3rem;
+        background-color: $primary-background;
+        overflow: hidden;
+    }
+
+    &__details {
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    &__heading {
+        font-weight: 700;
+        font-size: 2rem;
+    }
+
+    &__info {
+        font-weight: 400;
+        font-size: 1.5rem;
+        color: $secondary-text;
+    }
+
+    &__message {
+        padding: .5rem 1rem;
+        border: 1px solid $secondary-background;
+        border-radius: .3rem;
+        -webkit-box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.75);
+        box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.75);
+    }
+
+    &__buttons {
+        padding: 2rem;
+        background-color: $secondary-background;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: .3rem;
+
+        &-cancel,
+        &-delete {
+            padding: 1.3rem 3rem;
+            border-radius: .3rem;
+            font-family: $primary-font;
+            font-weight: 600;
+            font-size: 1.4rem;
+            color: $primary-text;
+            border: none;
+            transition: all .2s;
+            cursor: pointer;
+        }
+
+        &-cancel {
+            background-color: transparent;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        &-delete {
+            background-color: $error-text;
+
+            &:hover {
+                background-color: $error-text-dark;
+            }
+        }
+    }
+}

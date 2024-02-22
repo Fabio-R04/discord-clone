@@ -1,0 +1,119 @@
+// Background Color
+$primary-background: rgb(54, 54, 61);
+$secondary-background: rgb(43, 43, 48);
+$tertiary-background: rgb(32, 32, 34);
+
+// Text Color
+$primary-text: hsl(220 calc(1 *13%) 95.5% /1);
+$secondary-text: hsl(215 calc(1 *8.8%) 73.3% /1);
+$tertiary-text: hsl(214 calc(1 *8.1%) 61.2% /1);
+$link-text: hsl(200 calc(1 *100%) 49.4% /1);
+$link-text-dark: rgb(24, 119, 242);
+$error-text: #e50914;
+$error-text-dark: #b60811;
+
+// Button
+$primary-button: hsl(235 calc(1 *85.6%) 64.7%);
+$primary-button-hover: hsl(235 calc(1 *51.4%) 52.4% /1);
+$secondary-button: rgb(239, 239, 239);
+$secondary-button-hover: rgb(219, 219, 219);
+$tertiary-button: rgb(21, 17, 17);
+$tertiary-button-hover: #191717;
+
+// Hover 
+$hover-overlay: rgba(0, 0, 0, .05);
+
+// Popup Background
+$popup-bg: rgba(0, 0, 0, .65);
+$popup-bg-light: rgba(0, 0, 0, .3);
+
+// Border
+$border-main: rgb(219, 219, 219);
+$border-light: rgb(235, 235, 235);
+
+// Font Family
+$primary-font: 'Noto Sans', sans-serif;
+
+// Responsive Breakpoints 
+$bp-extra-large: 87.5em; // 1400px
+$bp-largest: 75em; // 1200px
+$bp-large: 62.5em; // 1000px
+$bp-medium: 50em; // 800px
+$bp-small: 37.5em; // 600px
+$bp-extra-small: 25em; // 450px
+
+:root {
+    color-scheme: dark;
+}
+
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+
+    @media only screen and (max-width: $bp-largest) {
+        font-size: 50%;
+    }
+}
+
+body {
+    font-family: $primary-font;
+    font-weight: 400;
+    color: $primary-text;
+    background-color: $primary-background;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+span {
+    margin: 0;
+}
+
+// Reuseable
+.main-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.divider {
+    height: 100%;
+    width: 1px;
+    background-color: rgb(83, 83, 83) !important;
+    cursor: default !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.btn-primary {
+    background-color: $primary-button;
+    
+    &:hover {
+        background-color: $primary-button-hover;
+    }
+}
+
+.btn-success {
+    background-color: #248046;
+
+    &:hover {
+        background-color: rgba($color: #248046, $alpha: .8);
+    }
+}
+
+.mb-sm {
+    margin-bottom: 1rem;
+}

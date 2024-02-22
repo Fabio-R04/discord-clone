@@ -1,0 +1,109 @@
+.search-friends {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: $popup-bg;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    z-index: 50;
+
+    &__heading {
+        font-weight: 500;
+        font-size: 1.7rem;
+    }
+
+    &__popup {
+        background-color: $primary-background;
+        max-width: 57rem;
+        min-height: 38rem;
+        width: 100%;
+        padding: 2rem;
+        border-radius: .5rem;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+
+        &-input {
+            background-color: $tertiary-background;
+            padding: 2rem 1.5rem;
+            font-weight: 400;
+            font-family: $primary-font;
+            font-size: 1.8rem;
+            color: $primary-text;
+            border: none;
+            border-radius: .5rem;
+
+            &:focus,
+            &:active {
+                outline: none;
+            }
+
+            &::placeholder {
+                color: $tertiary-text;
+            }
+        }
+
+        &-results {
+            flex: 1;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+
+            &__user {
+                padding: 1rem;
+                border-radius: .5rem;
+                user-select: none;
+                cursor: pointer;
+                transition: all .2s;
+                display: flex;
+                align-items: center;
+                gap: .6rem;
+
+                &:hover {
+                    background-color: rgb(71, 71, 80);
+                }
+
+                &-img {
+                    display: block;
+                    height: 2.2rem;
+                    width: 2.2rem;
+                    border-radius: 50%;
+                    object-fit: cover;
+                }
+
+                &-details {
+                    display: flex;
+                    align-items: center;
+                    gap: .6rem;
+
+                    p {
+                        font-weight: 400;
+                        font-size: 1.5rem;
+                    }
+
+                    p:nth-child(1) {
+                        color: $primary-text;
+                    }
+
+                    p:nth-child(2) {
+                        color: $tertiary-text;
+                    }
+                }
+            }
+
+            &__none {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                font-weight: 600;
+                font-size: 2rem;
+            }
+        }
+    }
+}

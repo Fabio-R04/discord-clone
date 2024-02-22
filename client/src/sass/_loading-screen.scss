@@ -1,0 +1,29 @@
+.loading-screen {
+    background-color: $primary-background;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 50;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: .7rem;
+
+        svg {
+            height: 6.5rem;
+            width: 6.5rem;
+        }
+        
+        p {
+            font-weight: 500;
+            font-size: 1.5rem;
+            color: $secondary-text;
+        }
+    }
+}
